@@ -19,9 +19,9 @@ async function dataURItoBlob(dataURI) {
 const fileId = "file_" + uuid();
 
 export default function Home() {
-  const [selectedBase64, setSelectedFileBase64] = useState<File>();
+  const [selectedBase64, setSelectedFileBase64] = useState<string | ArrayBuffer>();
   const [selectedBlob, setSelectedFileBlob] = useState<File>();
-  const [loadedImage, setLoadedImage] = useState();
+  const [loadedImage, setLoadedImage] = useState("");
   const [finalUrl, setFinalUrl] = useState("");
 
   const setUrl = (id) => {
